@@ -59,9 +59,8 @@ body {
     position: absolute;
     margin-left: 350px;
     width: 440px;
-    background-color: rgb(243, 246, 246);
     padding: 20px;
-    height: 170%;
+    height: 100%;
     flex: 1;
 }
 .name {
