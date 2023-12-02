@@ -102,14 +102,22 @@ body {
     font-size: small;
     align-items: center;
     margin-bottom: 10px;
-   
 }
-.info-item {
-    display: flex;
-    font-size: small;
-    align-items: center;
-    margin-bottom: 10px;
-  
+
+@media (max-width: 480px) {
+    .info-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .info-item .bold_text {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .info-item .icon-circle {
+        margin-bottom: 5px;
+    }
 }
 .description p {
     margin-bottom: -8px;
