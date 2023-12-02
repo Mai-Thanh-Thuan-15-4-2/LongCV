@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
+    width: 70vw; 
     height: 95vh;
     padding: 20px;
     background-color: white;
@@ -20,19 +20,7 @@ body {
     overflow: auto;
 }
 
-@media print {
-    .container {
-        width: 210mm;
-        height: 297mm;
-    }
-}
-.bold_text{
-    font-weight: bold;
-}
-.text_primary{
-    color: rgb(38, 17, 101);
-    font-size: small;
-}
+
 .avt {
     margin: auto;
     display: block;
@@ -46,6 +34,7 @@ body {
 .job{
     text-transform: uppercase; 
     text-align: center;
+    font-size: 13px;
 }
 
 .columns {
@@ -56,32 +45,28 @@ body {
 
 .info-column {
     margin-top: 10px;
-    margin-right: 2%;
     width: 48%;
+    margin-left: 2%;
     background-color: #e0e0e0;
     padding: 20px;
     box-sizing: border-box;
 }
 
 .content-column {
+    background-color: rgb(194, 239, 180);
     margin-top: 10px;
-    margin-left: 2%;
     width: 48%;
-    padding: 20px;
+    margin-left: 1%;
+    padding: 10px;
     box-sizing: border-box;
 }
-
-@media print {
-    .columns {
-        flex-wrap: nowrap;
+.bold_text{
+    font-weight: bold;
     }
-  
-    .info-column,
-    .content-column {
-        width: 100%;
-        margin: 0;
+    .text_primary{
+    color: rgb(38, 17, 101);
+    font-size: small;
     }
-}
 .info-column img, .info-column h3 {
     margin-bottom: 20px;
 }
@@ -92,6 +77,19 @@ body {
     text-align: center; 
     color: rgb(24, 110, 110);
     line-height: 3px;
+    animation: color-animation 3s infinite;
+}
+
+@keyframes color-animation {
+    0% {
+        color: rgb(188, 196, 31);
+    }
+    50% {
+        color: rgb(209, 22, 22);
+    }
+    100% {
+        color: rgb(30, 234, 33)
+    }
 }
 .basic_info {
     margin-top: 20px;
@@ -149,6 +147,70 @@ body {
 .info-item i {
     color: #333;
 }
+.contact-icons {
+    text-align: center;
+}
+
+.hexagon-frame {
+    display: flex;
+    justify-content: space-around;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: #000;
+}
+
+.contact-icons a {
+    color: #000; 
+    font-size: 24px; 
+    text-decoration: none;
+}
+
+.contact-icons a:hover,
+.contact-icons a:focus {
+    font-size: 30px;
+}
+.fa-facebook:hover,
+.fa-facebook:focus {
+    color: #0400ff;
+}
+.fa-instagram:hover,
+.fa-instagram:focus {
+    background-image: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.fa-tiktok:hover,
+.fa-tiktok:focus {
+    background-image: linear-gradient(to right, #657c7e, #891433);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hexagon-frame a i {
+    padding: 10px;
+}
+
+.hexagon-frame a:first-child i {
+    margin-left: 0;
+}
+
+.hexagon-frame a:last-child i {
+    margin-right: 0;
+}
+.icon-container {
+    text-align: center;
+}
+
+.icon-container a {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.icon-caption {
+    font-size: 10px;
+}
 .info_title,
 .info_title2,
 .info_title3,
@@ -190,15 +252,15 @@ body {
 }
 .info_title4::after {
     margin-left: 70px;
-    width: 88%;
+    width: 83%;
 }
 .info_title5::after {
     margin-left: 80px;
-    width: 85%;
+    width: 80%;
 }
 .info_title6::after {
     margin-left: 90px;
-    width: 83%;
+    width: 78%;
 }
 .title{
     text-align: center;
@@ -250,7 +312,7 @@ body {
 .rating {
     width: 150px;
     height: 10px;
-    background: #ddd;
+    background: #9a9393;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
