@@ -18,8 +18,8 @@ function loadCVData() {
     .then(data => {
         cvData = data.record;
         // Chuyển rating từ 0-100 sang 1-10 nếu dữ liệu cũ
-        cvData.it_skills.forEach(item => item.rating = Math.round(item.rating / 10) || 1);
-        cvData.languages.forEach(item => item.rating = Math.round(item.rating / 10) || 1);
+        cvData.it_skills.forEach(item => item.rating = Math.round(item.rating));
+        cvData.languages.forEach(item => item.rating = Math.round(item.rating));
         renderCV(cvData);
     })
     .catch(error => console.error("Error loading CV data:", error));
